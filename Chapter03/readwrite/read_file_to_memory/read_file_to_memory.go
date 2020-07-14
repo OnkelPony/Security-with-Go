@@ -7,10 +7,11 @@ import (
 
 func main() {
 	// Read file to byte slice
-	data, err := ioutil.ReadFile("test.txt")
+	data, err := ioutil.ReadFile("test_copy.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	log.Printf("Data read: %s\n", data)
+	log.Printf("Amount of data read: %d\n", len(data))
 }

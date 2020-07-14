@@ -15,7 +15,7 @@ func main() {
 	defer originalFile.Close()
 
 	// Create new file
-	newFile, err := os.Create("test_copy.txt")
+	newFile, err := os.Create("test.txt")
 	if err != nil {
 		log.Fatal(err)
 	}

@@ -28,8 +28,12 @@ func main() {
 
 	// Write string to buffer
 	// Also available are WriteRune() and WriteByte()
+	bytesWritten, err = bufferedWriter.WriteRune(666)
+	if err != nil {
+		log.Fatal(err)
+	}
 	bytesWritten, err = bufferedWriter.WriteString(
-		"Buffered string\n",
+		"\nBuffered string\n",
 	)
 	if err != nil {
 		log.Fatal(err)

@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	err := ioutil.WriteFile("test.txt", []byte("Hi\n"), 0666)
+	err := ioutil.WriteFile("test.txt", []byte("Hi\n"), 0640)
 	if err != nil {
 		log.Fatal(err)
 	}

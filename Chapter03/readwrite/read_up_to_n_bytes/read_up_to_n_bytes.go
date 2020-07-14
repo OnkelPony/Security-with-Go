@@ -16,7 +16,7 @@ func main() {
 	// Read up to len(b) bytes from the File
 	// Zero bytes written means end of file
 	// End of file returns error type io.EOF
-	byteSlice := make([]byte, 16)
+	byteSlice := make([]byte, 18)
 	bytesRead, err := file.Read(byteSlice)
 	if err != nil {
 		log.Fatal(err)

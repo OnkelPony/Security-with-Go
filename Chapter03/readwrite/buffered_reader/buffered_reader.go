@@ -9,15 +9,15 @@ import (
 
 func main() {
 	// Open file and create a buffered reader on top
-	file, err := os.Open("test.txt")
+	file, err := os.Open("test_copy.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
 	bufferedReader := bufio.NewReader(file)
 
 	// Get bytes without advancing pointer
-	byteSlice := make([]byte, 5)
-	byteSlice, err = bufferedReader.Peek(5)
+	byteSlice := make([]byte, 6)
+	byteSlice, err = bufferedReader.Peek(6)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -30,7 +30,7 @@ func main() {
 	}
 	fmt.Printf("Read %d bytes: %s\n", numBytesRead, byteSlice)
 
-	// Ready 1 byte. Error if no byte to read
+	// Read 1 byte. Error if no byte to read
 	myByte, err := bufferedReader.ReadByte()
 	if err != nil {
 		log.Fatal(err)
@@ -47,7 +47,7 @@ func main() {
 
 	// Read up to and including delimiter
 	// Returns string
-	dataString, err := bufferedReader.ReadString('\n')
+	dataString, err := bufferedReader.ReadString(')')
 	if err != nil {
 		log.Fatal(err)
 	}

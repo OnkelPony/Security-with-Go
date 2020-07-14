@@ -14,7 +14,7 @@ func main() {
 	}
 
 	byteSlice := make([]byte, 512)
-	minBytes := 8
+	minBytes := 54
 	// io.ReadAtLeast() will return an error if it cannot
 	// find at least minBytes to read. It will read as
 	// many bytes as byteSlice can hold.

@@ -9,7 +9,7 @@ import (
 
 func main() {
 	// Open file and create scanner on top of it
-	file, err := os.Open("test.txt")
+	file, err := os.Open("test_copy.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -33,6 +33,8 @@ func main() {
 
 	// Get data from scan with Bytes() or Text()
 	fmt.Println("First word found:", scanner.Text())
+	scanner.Scan()
+	fmt.Println("second word found:", scanner.Text())
 
 	// Call scanner.Scan() manually, or loop with for
 	for scanner.Scan() {

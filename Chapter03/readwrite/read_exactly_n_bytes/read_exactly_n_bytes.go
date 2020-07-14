@@ -16,7 +16,7 @@ func main() {
 	// The file.Read() function will happily read a tiny file in to a large
 	// byte slice, but io.ReadFull() will return an
 	// error if the file is smaller than the byte slice.
-	byteSlice := make([]byte, 2)
+	byteSlice := make([]byte, 27)
 	numBytesRead, err := io.ReadFull(file, byteSlice)
 	if err != nil {
 		log.Fatal(err)
