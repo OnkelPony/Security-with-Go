@@ -32,6 +32,7 @@ func main() {
 	}{
 		{"test.txt", "String contents of file"},
 		{"test2.txt", "\x61\x62\x63\n"},
+		{"test3.txt", "Vyhul mi, pyčo!"},
 	}
 
 	// Create and write files to the archive, which in turn

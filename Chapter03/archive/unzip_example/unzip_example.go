@@ -33,7 +33,8 @@ func main() {
 		// to move it to a different directory.
 		// In this case, we will extract the file from
 		// the zip to a file of the same name.
-		targetDir := "./"
+		targetDir := "./unzipped/"
+		os.Mkdir(targetDir, 0777)
 		extractedFilePath := filepath.Join(
 			targetDir,
 			file.Name,
