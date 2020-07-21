@@ -30,7 +30,7 @@ func main() {
 	defer gzipReader.Close()
 
 	// Uncompress to a writer. We'll use a file writer
-	outfileWriter, err := os.Create("unzipped.txt")
+	outfileWriter, err := os.Create("unzipped_file.txt")
 	if err != nil {
 		log.Fatal(err)
 	}

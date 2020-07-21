@@ -16,7 +16,7 @@ func main() {
 	fmt.Println("Temp dir created:", tempDirPath)
 
 	// Create a file in new temp directory
-	tempFile, err := ioutil.TempFile(tempDirPath, "myTempFile.txt")
+	tempFile, err := ioutil.TempFile(tempDirPath, "můjDočasnýSoubor.txt")
 	if err != nil {
 		log.Fatal(err)
 	}

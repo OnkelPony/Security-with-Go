@@ -27,7 +27,7 @@ func main() {
 	// the compression works since we just
 	// use it as a simple writer interface
 	// that we send bytes to
-	_, err = gzipWriter.Write([]byte("Gophers rule!\n"))
+	_, err = gzipWriter.Write([]byte("Gophers rule them all!\n"))
 	if err != nil {
 		log.Fatal(err)
 	}

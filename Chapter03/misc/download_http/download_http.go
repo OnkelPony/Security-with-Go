@@ -9,14 +9,14 @@ import (
 
 func main() {
 	// Create output file
-	newFile, err := os.Create("devdungeon.html")
+	newFile, err := os.Create("jakPsatWeb.html")
 	if err != nil {
 		log.Fatal(err)
 	}
 	defer newFile.Close()
 
 	// HTTP GET request devdungeon.com
-	url := "http://www.devdungeon.com/archive"
+	url := "http://www.jakpsatweb.cz"
 	response, err := http.Get(url)
 	defer response.Body.Close()
 
