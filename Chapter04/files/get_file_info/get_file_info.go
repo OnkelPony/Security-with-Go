@@ -14,7 +14,7 @@ var (
 func main() {
 	// Stat returns file info. It will return
 	// an error if there is no file.
-	fileInfo, err = os.Stat("test.txt")
+	fileInfo, err = os.Stat("test.txt.gz")
 	if err != nil {
 		log.Fatal(err)
 	}

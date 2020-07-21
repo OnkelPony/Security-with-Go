@@ -21,8 +21,7 @@ func insertSorted(fileList *list.List, fileNode FileNode) {
 	}
 
 	for element := fileList.Front(); element != nil; element = element.Next() {
-		if fileNode.Info.ModTime().Before(element.Value.
-			(FileNode).Info.ModTime()) {
+		if fileNode.Info.ModTime().Before(element.Value.(FileNode).Info.ModTime()) {
 			fileList.InsertBefore(fileNode, element)
 			return
 		}
@@ -55,7 +54,7 @@ func GetFilesInDirRecursivelyBySize(fileList *list.List, path string) {
 
 func main() {
 	fileList := list.New()
-	GetFilesInDirRecursivelyBySize(fileList, "/")
+	GetFilesInDirRecursivelyBySize(fileList, "/home/gio/Stažené/")
 
 	for element := fileList.Front(); element != nil; element = element.Next() {
 		fmt.Print(element.Value.(FileNode).Info.ModTime())

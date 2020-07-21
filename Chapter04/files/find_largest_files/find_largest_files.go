@@ -54,7 +54,7 @@ func getFilesInDirRecursivelyBySize(fileList *list.List, path string) {
 
 func main() {
 	fileList := list.New()
-	getFilesInDirRecursivelyBySize(fileList, "/home")
+	getFilesInDirRecursivelyBySize(fileList, "/home/gio/Plocha")
 
 	for element := fileList.Front(); element != nil; element =
 		element.Next() {
