@@ -10,7 +10,7 @@ import (
 
 func main() {
 
-	outFile, err := os.Create("test.zip")
+	outFile, err := os.Create("testStego.zip")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -21,7 +21,7 @@ func main() {
 	var filesToArchive = []struct {
 		Name, Body string
 	}{
-		{"test.txt", "String contents of file"},
+		{"test.txt", "Tohle je obsah souboru, pyčo!"},
 		{"test2.txt", "\x61\x62\x63\n"},
 	}
 

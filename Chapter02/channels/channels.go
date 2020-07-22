@@ -8,7 +8,7 @@ import (
 // Do some processing that takes a long time
 // in a separate thread and signal when done
 func process(doneChannel chan bool) {
-	time.Sleep(time.Second * 3)
+	time.Sleep(time.Second * 6)
 	doneChannel <- true
 }
 

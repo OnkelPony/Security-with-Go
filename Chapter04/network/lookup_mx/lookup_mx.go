@@ -13,7 +13,7 @@ func main() {
 	}
 	arg := os.Args[1]
 
-	fmt.Println("Looking up MX records for " + arg)
+	fmt.Println("Looking up MX records for " + arg + "...")
 
 	mxRecords, err := net.LookupMX(arg)
 	if err != nil {

@@ -13,7 +13,7 @@ func main() {
 	}
 	arg := os.Args[1]
 
-	fmt.Println("Looking up nameservers for " + arg)
+	fmt.Println("Looking up nameservers for " + arg + "...")
 
 	nameservers, err := net.LookupNS(arg)
 	if err != nil {

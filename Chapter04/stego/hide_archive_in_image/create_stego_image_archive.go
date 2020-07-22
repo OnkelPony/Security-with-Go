@@ -16,7 +16,7 @@ func main() {
 	defer firstFile.Close()
 
 	// Second file
-	secondFile, err := os.Open("test.zip")
+	secondFile, err := os.Open("testStego.zip")
 	if err != nil {
 		log.Fatal(err)
 	}

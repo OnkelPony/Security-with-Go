@@ -34,7 +34,7 @@ func main() {
 				log.Fatal(err)
 			}
 			if bytes.Equal(byteSlice, []byte{'\x4b', '\x03', '\x04'}) {
-				log.Printf("Found zip signature at byte %d.", i)
+				log.Printf("Found zip signature at byte %d of file %s.", i, filename)
 			}
 		}
 	}

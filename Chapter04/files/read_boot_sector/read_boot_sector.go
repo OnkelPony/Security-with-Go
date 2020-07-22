@@ -22,15 +22,15 @@ func main() {
 	// The file.Read() function will read a tiny file in to a large
 	// byte slice, but io.ReadFull() will return an
 	// error if the file is smaller than the byte slice.
-	byteSlice := make([]byte, 512)
+	mbrByteSlice := make([]byte, 512)
 	// ReadFull Will error if 512 bytes not available to read
-	numBytesRead, err := io.ReadFull(file, byteSlice)
+	numBytesRead, err := io.ReadFull(file, mbrByteSlice)
 	if err != nil {
 		log.Fatal("Error reading 512 bytes from file. " + err.Error())
 	}
 
 	log.Printf("Bytes read: %d\n\n", numBytesRead)
-	log.Printf("Data as decimal:\n%d\n\n", byteSlice)
-	log.Printf("Data as hex:\n%x\n\n", byteSlice)
-	log.Printf("Data as string:\n%s\n\n", byteSlice)
+	log.Printf("Data as decimal:\n%d\n\n", mbrByteSlice)
+	log.Printf("Data as hex:\n%x\n\n", mbrByteSlice)
+	log.Printf("Data as string:\n%s\n\n", mbrByteSlice)
 }
