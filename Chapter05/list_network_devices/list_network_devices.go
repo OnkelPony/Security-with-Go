@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"log"
 	"github.com/google/gopacket/pcap"
+	"log"
 )
 
 func main() {
@@ -14,7 +14,7 @@ func main() {
 	}
 
 	// Print device information
-	fmt.Println("Devices found:")
+	fmt.Println("All devices found:")
 	for _, device := range devices {
 		fmt.Println("\nName: ", device.Name)
 		fmt.Println("Description: ", device.Description)

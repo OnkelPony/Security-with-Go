@@ -9,7 +9,7 @@ import (
 )
 
 var (
-	device            = "eth0"
+	device            = "wlo1"
 	snapshotLen int32 = 1024
 	promiscuous       = false
 	err         error
