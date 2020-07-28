@@ -9,7 +9,7 @@ import (
 )
 
 var (
-	device            = "eth0"
+	device            = "any"
 	snapshotLen int32 = 1024
 	promiscuous       = false
 	err         error
@@ -26,12 +26,12 @@ func main() {
 	defer handle.Close()
 
 	// Set filter
-	var filter string = "tcp and port 80" // or os.Args[1]
+	var filter string = "tcp and port 993" // or os.Args[1]
 	err = handle.SetBPFFilter(filter)
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println("Only capturing TCP port 80 packets.")
+	fmt.Println("Only capturing TCP port 993 packets.")
 
 	packetSource := gopacket.NewPacketSource(handle, handle.LinkType())
 	for packet := range packetSource.Packets() {
