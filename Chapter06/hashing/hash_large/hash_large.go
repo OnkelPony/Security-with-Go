@@ -52,5 +52,5 @@ func main() {
 	// writer interface and don't need to pass any new bytes
 	checksum := hasher.Sum(nil)
 
-	fmt.Printf("Md5 checksum: %x\n", checksum)
+	fmt.Printf("Md5 checksum: %b\n", checksum)
 }

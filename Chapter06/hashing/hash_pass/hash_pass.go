@@ -3,7 +3,7 @@ package main
 import (
 	"crypto/hmac"
 	"crypto/rand"
-	"crypto/sha256"
+	"crypto/sha512"
 	"encoding/base64"
 	"encoding/hex"
 	"fmt"
@@ -41,7 +41,7 @@ func generateSalt() string {
 
 // Hash a password with the salt
 func hashPassword(plainText string, salt string) string {
-	hash := hmac.New(sha256.New, []byte(secretKey))
+	hash := hmac.New(sha512.New, []byte(secretKey))
 	io.WriteString(hash, plainText+salt)
 	hashedValue := hash.Sum(nil)
 	return hex.EncodeToString(hashedValue)
