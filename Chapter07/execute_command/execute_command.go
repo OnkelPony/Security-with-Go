@@ -7,9 +7,9 @@ import (
 	"os"
 )
 
-var username = "username"
-var host = "example.com:22"
-var privateKeyFile = "/home/user/.ssh/id_rsa"
+var username = "testig"
+var host = "ven.gam.as:22"
+var privateKeyFile = "/home/testig/.ssh/id_ed25519"
 var commandToExecute = "hostname"
 
 func getKeySigner(privateKeyFile string) ssh.Signer {

@@ -5,9 +5,9 @@ import (
 	"log"
 )
 
-var username = "username"
-var password = "password"
-var host = "example.com:22"
+var username = "testig"
+var password = "ChroKvi"
+var host = "ven.gam.as:22"
 
 func main() {
 	config := &ssh.ClientConfig{
