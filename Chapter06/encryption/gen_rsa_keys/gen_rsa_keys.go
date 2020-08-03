@@ -15,7 +15,7 @@ func printUsage() {
 	fmt.Printf(os.Args[0] + `
 
 Generate a private and public RSA keypair and save as PEM files.
-If no key size is provided, a default of 2048 is used.
+If no key size is provided, a default of 1024 is used.
 
 Usage:
   ` + os.Args[0] + ` <private_key_filename> <public_key_filename> [keysize]
@@ -33,7 +33,7 @@ func checkArgs() (string, string, int) {
 		os.Exit(1)
 	}
 
-	defaultKeySize := 2048
+	defaultKeySize := 1024
 
 	// If there are 2 args provided, privkey and pubkey filenames
 	if len(os.Args) == 3 {
@@ -58,8 +58,8 @@ func checkArgs() (string, string, int) {
 // PEM is a base-64 encoding of the key
 func getPrivatePemFromKey(privateKey *rsa.PrivateKey) *pem.Block {
 	encodedPrivateKey := x509.MarshalPKCS1PrivateKey(privateKey)
-	var privatePem = &pem.Block {
-		Type: "RSA PRIVATE KEY",
+	var privatePem = &pem.Block{
+		Type:  "RSA PRIVATE KEY",
 		Bytes: encodedPrivateKey,
 	}
 	return privatePem
@@ -87,7 +87,6 @@ func savePemToFile(pemBlock *pem.Block, filename string) {
 		log.Fatal("Error opening pubkey output file. ", err)
 	}
 	defer publicPemOutputFile.Close()
-
 
 	err = pem.Encode(publicPemOutputFile, pemBlock)
 	if err != nil {
