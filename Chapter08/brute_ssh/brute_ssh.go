@@ -76,7 +76,7 @@ func main() {
 
 	doneChannel := make(chan bool)
 	numThreads := 0
-	maxThreads := 2
+	maxThreads := 4
 
 	// Check each password against url
 	for scanner.Scan() {
