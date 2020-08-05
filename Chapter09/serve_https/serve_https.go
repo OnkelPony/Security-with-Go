@@ -15,7 +15,7 @@ func main() {
 	err := http.ListenAndServeTLS(
 		"localhost:8181",
 		"cert.pem",
-		"privateKey.pem",
+		"PrivateKey.pem",
 		nil,
 	)
 	if err != nil {

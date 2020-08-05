@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	rawString := `<script>alert("Test");</script>`
+	rawString := `<script>alert("PWNed!");</script>`
 	safeString := html.EscapeString(rawString)
 
 	fmt.Println("Unescaped: " + rawString)
