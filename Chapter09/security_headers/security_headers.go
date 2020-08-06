@@ -35,5 +35,5 @@ func main() {
 	negroniHandler.Use(negroni.NewLogger())
 	negroniHandler.UseHandler(multiplexer)
 
-	http.ListenAndServe("localhost:3000", negroniHandler)
+	http.ListenAndServe("localhost:3200", negroniHandler)
 }

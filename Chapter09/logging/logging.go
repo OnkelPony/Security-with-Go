@@ -9,7 +9,7 @@ import (
 
 // Return response to client
 func indexHandler(writer http.ResponseWriter, request *http.Request) {
-	fmt.Fprintf(writer, "You requested: " + request.URL.Path)
+	fmt.Fprintf(writer, "You requested: "+request.URL.Path)
 }
 
 func main() {
@@ -20,5 +20,5 @@ func main() {
 	negroniHandler.Use(negroni.NewLogger()) // Use Negroni's default logging middleware
 	negroniHandler.UseHandler(multiplexer)
 
-	http.ListenAndServe("localhost:3000", negroniHandler)
+	http.ListenAndServe("localhost:5454", negroniHandler)
 }

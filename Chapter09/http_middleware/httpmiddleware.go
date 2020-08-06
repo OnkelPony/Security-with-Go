@@ -15,6 +15,7 @@ func customMiddlewareHandler(rw http.ResponseWriter,
 ) {
 	log.Println("Incoming request: " + r.URL.Path)
 	log.Println("User agent: " + r.UserAgent())
+	log.Println("Method: " + r.Method)
 
 	next(rw, r) // Pass on to next middleware handler
 }
@@ -32,5 +33,5 @@ func main() {
 	negroniHandler.Use(negroni.HandlerFunc(customMiddlewareHandler))
 	negroniHandler.UseHandler(multiplexer)
 
-	http.ListenAndServe("localhost:3000", negroniHandler)
+	http.ListenAndServe("localhost:1666", negroniHandler)
 }
