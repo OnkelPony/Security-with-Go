@@ -11,7 +11,7 @@ import (
 // The Tor proxy server must already be running and listening
 func main() {
 	targetUrl := "https://check.torproject.org"
-	torProxy := "socks5://localhost:9050" // 9150 w/ Tor Browser
+	torProxy := "socks5://127.0.0.1:9050" // 9150 w/ Tor Browser
 
 	// Parse Tor proxy URL string to a URL type
 	torProxyUrl, err := url.Parse(torProxy)

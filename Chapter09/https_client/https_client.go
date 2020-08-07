@@ -8,7 +8,7 @@ import (
 
 func main() {
 	// Load cert
-	cert, err := tls.LoadX509KeyPair("cert.pem", "privKey.pem")
+	cert, err := tls.LoadX509KeyPair("cert.pem", "PrivateKey.pem")
 	if err != nil {
 		log.Fatal(err)
 	}

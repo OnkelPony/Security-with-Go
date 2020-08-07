@@ -9,7 +9,7 @@ import (
 
 func main() {
 	// Make basic HTTP GET request
-	response, err := http.Get("http://www.example.com")
+	response, err := http.Get("http://www.assoass.com")
 	if err != nil {
 		log.Fatal("Error fetching URL. ", err)
 	}

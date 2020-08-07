@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	proxyUrlString := "http://<proxyIp>:<proxyPort>"
+	proxyUrlString := "http://5.181.83.1:8080"
 	proxyUrl, err := url.Parse(proxyUrlString)
 	if err != nil {
 		log.Fatal("Error parsing URL. ", err)
