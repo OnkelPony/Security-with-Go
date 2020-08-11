@@ -25,7 +25,7 @@ func main() {
 	// Create a custom http client to override default settings. Optional step.
 	// Use http.Get() instead of client.Get() to use default client.
 	client := &http.Client{
-		Timeout: 30 * time.Second, // Default is forever!
+		Timeout: 27 * time.Second, // Default is forever!
 		// CheckRedirect - Policy for following HTTP redirects
 		// Jar - Cookie jar holding cookies
 		// Transport - Change default method for making request
