@@ -17,7 +17,7 @@ func main() {
 	}
 
 	// Set cookie
-	request.Header.Set("Cookie", "session_id=<SESSION_TOKEN>")
+	request.Header.Set("Cookie", "session_id=<SESSION_TOKEN_ZWO>")
 
 	// Create the HTTP client, make request and print response
 	httpClient := &http.Client{}
