@@ -15,7 +15,7 @@ func main() {
 	if len(os.Args) != 2 {
 		fmt.Println("Search for HTML comments in a URL")
 		fmt.Println("Usage: " + os.Args[0] + " <url>")
-		fmt.Println("Example: " + os.Args[0] + " https://www.devdungeon.com")
+		fmt.Println("Example: " + os.Args[0] + " https://www.assoass.com")
 		os.Exit(1)
 	}
 	url := os.Args[1]
@@ -42,7 +42,7 @@ func main() {
 	// Print all HTML comments found
 	for _, match := range matches {
 
-		//cleanedMatch := match[4 : len(match)-1]
-		fmt.Println(match)
+		cleanedMatch := match[5 : len(match)-4]
+		fmt.Println(cleanedMatch)
 	}
 }

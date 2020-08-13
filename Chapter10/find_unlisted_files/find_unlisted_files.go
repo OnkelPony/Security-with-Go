@@ -46,7 +46,7 @@ func main() {
 		fmt.Println("Usage: " + os.Args[0] +
 			" <wordlist_file> <url> <maxThreads>")
 		fmt.Println("Example: " + os.Args[0] +
-			" wordlist.txt https://www.devdungeon.com 10")
+			" wordlist.txt https://www.assoass.com 10")
 		os.Exit(1)
 	}
 	wordlistFilename := os.Args[1]
