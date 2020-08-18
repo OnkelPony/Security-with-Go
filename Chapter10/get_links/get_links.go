@@ -34,7 +34,7 @@ func main() {
 	// Find and print all links
 	doc.Find("a").Each(func(i int, s *goquery.Selection) {
 		href, exists := s.Attr("href")
-		if exists {
+		if exists && len(href) > 4 && href[:5] == "https" {
 			fmt.Println(href)
 		}
 	})
