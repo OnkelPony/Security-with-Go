@@ -11,7 +11,7 @@ import (
 )
 
 var documentExtensions = []string{"doc", "docx", "pdf", "csv",
-	"xls", "xlsx", "zip", "gz", "tar"}
+	"xls", "xlsx", "zip", "gz", "tar", "ods", "odt", "mp4"}
 
 func main() {
 	// Load command line arguments

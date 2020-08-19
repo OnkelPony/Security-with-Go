@@ -38,7 +38,7 @@ func main() {
 	for _, headingTag := range headingTags {
 		fmt.Printf("== %s ==\n", headingTag)
 		doc.Find(headingTag).Each(func(i int, heading *goquery.Selection) {
-			fmt.Println(" * " + heading.Text())
+			fmt.Printf(" * %d %s", i, heading.Text())
 		})
 	}
 

@@ -20,6 +20,7 @@ var (
 func crawlUrl(path string) {
 	// Create a temporary URL object for this request
 	var targetUrl url.URL
+	fmt.Printf("startingUrl = %s\n", startingUrl)
 	targetUrl.Scheme = startingUrl.Scheme
 	targetUrl.Host = startingUrl.Host
 	targetUrl.Path = path
