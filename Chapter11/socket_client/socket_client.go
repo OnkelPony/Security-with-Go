@@ -1,19 +1,19 @@
 package main
 
 import (
-	"net"
 	"log"
+	"net"
 )
 
 var protocol = "tcp" // tcp or udp
-var remoteHostAddress = "localhost:9999"
+var remoteHostAddress = "localhost:10854"
 
 func main() {
 	conn, err := net.Dial(protocol, remoteHostAddress)
 	if err != nil {
 		log.Fatal("Error creating listener. ", err)
 	}
-	conn.Write([]byte("Hello, server. Are you there?"))
+	conn.Write([]byte("Hello, server. Are you there? Probably yes ;-)"))
 
 	serverResponseBuffer := make([]byte, 4096)
 	numBytesRead, err := conn.Read(serverResponseBuffer)

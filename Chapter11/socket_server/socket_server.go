@@ -1,13 +1,13 @@
 package main
 
 import (
-	"net"
 	"fmt"
 	"log"
+	"net"
 )
 
 var protocol = "tcp" // tcp or udp
-var listenAddress = "localhost:3000"
+var listenAddress = "localhost:10854"
 
 func main() {
 	listener, err := net.Listen(protocol, listenAddress)
