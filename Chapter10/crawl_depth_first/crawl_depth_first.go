@@ -14,7 +14,7 @@ import (
 var (
 	foundPaths  []string
 	startingUrl *url.URL
-	timeout     = time.Duration(8 * time.Second)
+	timeout     = 8 * time.Second
 )
 
 func crawlUrl(path string) {
@@ -88,7 +88,8 @@ func main() {
 	foundPaths = make([]string, 0)
 
 	// Parse starting URL
-	startingUrl, err := url.Parse(os.Args[1])
+	var err error
+	startingUrl, err = url.Parse(os.Args[1])
 	if err != nil {
 		log.Fatal("Error parsing starting URL. ", err)
 	}
