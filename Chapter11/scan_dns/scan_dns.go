@@ -1,14 +1,13 @@
 package main
 
 import (
-	"strconv"
 	"log"
 	"net"
+	"strconv"
 	"strings"
 )
 
-var subnetToScan = "192.168.0" // First three octets
-//var subnetToScan = "8.8.8"
+var subnetToScan = "10.0.0" // First three octets
 
 func main() {
 	activeThreads := 0
@@ -22,7 +21,7 @@ func main() {
 
 	// Wait for all threads to finish
 	for activeThreads > 0 {
-		<- doneChannel
+		<-doneChannel
 		activeThreads--
 	}
 }

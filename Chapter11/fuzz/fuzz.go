@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-var ipToScan = "www.devdungeon.com"
+var ipToScan = "tessafowler.gam.as"
 var port = 80
 var maxFuzzBytes = 1024
 

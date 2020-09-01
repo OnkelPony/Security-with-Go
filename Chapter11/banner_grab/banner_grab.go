@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-var ipToScan = "127.0.0.1"
+var ipToScan = "10.0.0.138"
 
 func main() {
 	activeThreads := 0
