@@ -10,7 +10,7 @@ import (
 
 var (
 	pngData        []byte
-	imageSize      = 256 // Length and width in pixels
+	imageSize      = 512 // Length and width in pixels
 	err            error
 	outputFilename string
 	dataToEncode   string

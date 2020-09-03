@@ -43,7 +43,7 @@ func main() {
 	http.HandleFunc("/", logRequest)
 
 	// Kick off the listener using that will run forever
-	err := http.ListenAndServe(":8080", nil)
+	err := http.ListenAndServe(":10854", nil)
 	if err != nil {
 		log.Fatal("Error starting listener. ", err)
 	}

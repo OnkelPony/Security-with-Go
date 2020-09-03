@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	data := []byte("Test data")
+	data := []byte("Banik, pyčo!")
 
 	// Encode bytes to base64 encoded string.
 	encodedString := base64.StdEncoding.EncodeToString(data)

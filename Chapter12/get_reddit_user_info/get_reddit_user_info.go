@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
-	"net/http"
 	"os"
 	"time"
 )
@@ -40,18 +39,19 @@ func main() {
 		printUsage()
 		os.Exit(1)
 	}
-	url := "https://www.reddit.com/user/" + os.Args[1] + ".json"
+	url := "./" + os.Args[1] + ".json"
+	// url := "https://www.reddit.com/user/" + os.Args[1] + ".json"
 
 	// Make HTTP request and read response
-	response, err := http.Get(url)
+	body, err := ioutil.ReadFile(url)
 	if err != nil {
 		log.Fatal("Error making HTTP request. ", err)
 	}
-	defer response.Body.Close()
-	body, err := ioutil.ReadAll(response.Body)
-	if err != nil {
-		log.Fatal("Error reading HTTP response body. ", err)
-	}
+	// defer response.Body.Close()
+	// body, err := ioutil.ReadAll(response.Body)
+	// if err != nil {
+	// 	log.Fatal("Error reading HTTP response body. ", err)
+	// }
 
 	// Decode response into data struct
 	var redditUserInfo redditUserJsonResponse
@@ -59,7 +59,6 @@ func main() {
 	if err != nil {
 		log.Fatal("Error parson JSON. ", err)
 	}
-
 	if len(redditUserInfo.Data.Posts) == 0 {
 		fmt.Println("No posts found.")
 		fmt.Printf("Response Body: %s\n", body)
