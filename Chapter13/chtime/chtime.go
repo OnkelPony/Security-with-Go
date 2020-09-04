@@ -15,7 +15,7 @@ func main() {
 	}
 
 	// Change timestamp to a future time
-	futureTime := time.Now().Add(50 * time.Hour).Add(15 * time.Minute)
+	futureTime := time.Now().Add(108 * time.Hour).Add(15 * time.Minute)
 	lastAccessTime := futureTime
 	lastModifyTime := futureTime
 	err := os.Chtimes(os.Args[1], lastAccessTime, lastModifyTime)

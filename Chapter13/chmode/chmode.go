@@ -11,7 +11,7 @@ func main() {
 	if len(os.Args) != 3 {
 		fmt.Println("Change the permissions of a file.")
 		fmt.Println("Usage: " + os.Args[0] + " <mode> <filepath>")
-		fmt.Println("Example: " + os.Args[0] + " 777 test.txt")
+		fmt.Println("Example: " + os.Args[0] + " 666 test.txt")
 		fmt.Println("Example: " + os.Args[0] + " 0644 test.txt")
 		os.Exit(1)
 	}

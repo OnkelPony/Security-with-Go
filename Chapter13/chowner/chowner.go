@@ -14,7 +14,7 @@ func main() {
 		fmt.Println("Change the owner of a file.")
 		fmt.Println("Usage: " + os.Args[0] + " <user> <group> <filepath>")
 		fmt.Println("Example: " + os.Args[0] + " dano dano test.txt")
-		fmt.Println("Example: sudo " + os.Args[0] + " root root test.txt")
+		fmt.Println("Example: sudo " + os.Args[0] + " root root tests.txt")
 		os.Exit(1)
 	}
 	username := os.Args[1]
